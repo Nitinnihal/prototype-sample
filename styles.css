@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f0c040; /* Gold on hover */
+}
+
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(135deg, #333, #444);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-section .btn {
+  padding: 0.75rem 2rem;
+  background-color: #f0c040; /* Gold */
+  color: #333;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.hero-section .btn:hover {
+  background-color: #e0b030; /* Darker gold */
+}
+
+.about-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff; /* Background for better contrast */
+}
+
+.about-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Stack on smaller screens */
+}
+
+.about-image {
+  border-radius: 50%;
+  width: 200px; /* Fixed size for image */
+  height: 200px; /* Fixed size for image */
+  object-fit: cover; /* Ensure the image covers the circle */
+  margin-bottom: 2rem;
+}
+
+.about-section p {
+  max-width: 600px; /* Limit width for readability */
+  line-height: 1.6; /* Better spacing between lines */
+}
+
+.portfolio-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9; /* Light background for the section */
+}
+
+.portfolio-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.portfolio-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Wrap on small screens */
+}
+
+.portfolio-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 30%;
+  margin: 1rem; /* Add margin for spacing */
+  transition: transform 0.3s;
+  text-align: center; /* Center align text */
+}
+
+.portfolio-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem; /* Spacing below the image */
+}
+
+.portfolio-item h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Increase size for service titles */
+}
+
+.portfolio-item p {
+  line-height: 1.6; /* Better spacing between lines */
+}
+
+.contact-section {
+  background-color: #333;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-option {
+  background-color: #f0c040; /* Gold */
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: background-color 0.3s;
+}
+
+.contact-option:hover {
+  background-color: #e0b030; /* Darker gold */
+  color: #fff;
+}
+
+.contact-option i {
+  font-size: 1.5rem;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Testimonial Section */
+.testimonials-section {
+  padding: 4rem 2rem;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem; /* Increase heading size */
+}
+
+.testimonial-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-container {
+  width: 80%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-item {
+  min-width: 100%;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 0 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.testimonial-item h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.carousel-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem; /* Increased the font size */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 5%;
+}
+
+.next-btn {
+  right: 5%;
+}
+
+.carousel-btn:hover {
+  color: #484645;
+}
+
+/* Adjust for responsiveness */
+@media (max-width: 768px) {
+  .prev-btn {
+    left: 2%;
+  }
+
+  .next-btn {
+    right: 2%;
+  }
+
+  .testimonial-item {
+    padding: 1.5rem;
+  }
+
+  .portfolio-item {
+    width: 90%; /* Full width on small screens */
+    margin: 1rem 0; /* Vertical spacing */
+  }
+
+  .about-content {
+    flex-direction: column; /* Stack on small screens */
+  }
+}
